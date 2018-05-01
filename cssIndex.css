@@ -1,0 +1,20 @@
+/*
+    Created on : 2018-05-01, 16:57:32
+    Author     : Michał Koziara
+*/
+
+
+html{
+    background: cadetblue;
+}
+
+body {
+    margin: 10%;
+    padding: 0;
+    background: white;
+}
+
+section h2 {
+    text-align: center;
+}
+
