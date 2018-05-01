@@ -3,18 +3,52 @@
     Author     : Michał Koziara
 */
 
-
-html{
-    background: cadetblue;
+@font-face {
+    font-family: 'George IV';
+    font-style: normal;
+    font-weight: normal;
+    src: local('George IV'), url('George IV by Rory Harnden.woff') format('woff');
 }
 
-body {
-    margin: 10%;
+html {
+    width: 100%;
+    min-height: 100%;
+    background-color: #C0B283;
+    margin: 0;
     padding: 0;
-    background: white;
 }
 
-section h2 {
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    background-color: #373737;
+    width: 96%;
+    height: 66%;
+    transform: translate(-50%, -50%)
+}
+
+h1 {
     text-align: center;
+    font-family: 'George IV', serif;
+    font-size: 60px;
+}
+
+section div {
+    height: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 5px;
+}
+
+section div img {
+    height: 75px;
+    width: 75px;
+    border-radius: 8px;
+    margin: 0 20px;
 }
 
