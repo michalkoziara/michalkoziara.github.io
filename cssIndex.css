@@ -32,7 +32,7 @@ body{
 }
 
 
-header{
+header.container-fluid.mh-25{
     background-color: #C0B283;
     text-align: center;
     max-height: 20%;
@@ -43,24 +43,51 @@ h1 {
     font-family: 'George IV', serif;
 }
 
+a.GitHub[data]:hover:after {
+    content: attr(data);
+    padding: 0.222em 0.6em;
+    color: aliceblue;
+    position: absolute;
+    left: 75%;
+    top: -20%;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 5px ;
+    background: rgba(0,0,0,0.5);
+}
+
+
+a[data]:hover:after {
+    content: attr(data);
+    padding: 0.222em 0.6em;
+    color: deepskyblue;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 5px ;
+    background: rgba(0,0,0,0.5);
+}
+
 section{
     display: flex;
     align-items: center;
 }
 
-#icons{
+div.icons{
     z-index: 9999;
     display: flex;
     align-items: center;
     position: absolute;
 }
 
-#icons a img {
+div.icons a img {
     height: 100%;
     border-radius: 8px;
 }
 
-#icons a {
+div.icons a {
     font-size: 1em;
     height: 7em;
     width: 7em;
@@ -81,7 +108,7 @@ section{
     align-items: center;
 }
 
-canvas {
+#particles-js canvas {
     position: absolute;
     width: 100%;
     min-height: 100%;
@@ -90,8 +117,12 @@ canvas {
     vertical-align: bottom;
 }
 
+div.icons p{
+    display: none;
+}
+
 @media only screen and (max-width: 550px) {
-    #icons a {
+    div.icons a {
         max-width: 5em;
         max-height: 5em;
         margin: 0 0.3em;
@@ -105,5 +136,36 @@ canvas {
         min-height: 75%;
         min-height: 75vh;
         max-height: 75%;
+    }
+
+    div.icons a.GitHub[data]:hover:after
+    {
+        content: "";
+        padding: 0;
+    }
+    div.icons a[data]:hover:after
+    {
+        content: "";
+        padding: 0;
+    }
+
+    div.icons p{
+        display: block;
+        content: attr(data);
+        padding: 0.222em 0.6em;
+        color: deepskyblue;
+        position: absolute;
+        left: -5%;
+        top: 90%;
+        white-space: nowrap;
+        z-index: 2;
+        border-radius: 5px ;
+        background: rgba(0,0,0,0.5);
+    }
+
+    div.icons p.GitRWD {
+        color: aliceblue;
+        left: 70%;
+        top: -20%;
     }
 }
