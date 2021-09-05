@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="cssIndex.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+    <link rel="stylesheet" href="index.css">
 
     <title>Michał Koziara</title>
 </head>
 <body>
 
+<header class="container-fluid mh-25 typewriter">
+    <h1>Michał Koziara</h1>
+</header>
+<section class="justify-content-center">
+    <div class="jumbotron justify-content-center" id="particles-js">
+        <div class="icons justify-content-center">
+            <p class="linkedin-tooltip">LinkedIn</p>
+            <a class="linkedin-logo" data="LinkedIn" href="https://www.linkedin.com/in/michalkoziara">
+                <img src="img/LinkedIn-Logo.png" alt="LinkedIn"/>
+                <div class="bubble" id="linkedin">Learn about me</div>
+            </a>
 
-    <header class="container-fluid mh-25">
-        <h1>Michał Koziara</h1>
-    </header>
-
-    <section class="justify-content-center">
-        <div class="jumbotron justify-content-center" id="particles-js">
-            <div class="icons justify-content-center">
-
-                <p>LinkedIn</p>
-                <a data="LinkedIn" href="https://www.linkedin.com/in/michalkoziara">
-                    <img src="img/LinkedIn-Logo.png" alt="LinkedIn"/></a>
-
-                <p class="GitRWD">GitHub</p>
-                <a class="GitHub" data="GitHub" href="https://github.com/michalkoziara">
-                    <img src="img/GitHub-Mark.png" alt="GitHub"/></a>
-            </div>
+            <p class="github-tooltip">GitHub</p>
+            <a class="github-logo" data="GitHub" href="https://github.com/michalkoziara">
+                <img src="img/GitHub-Mark.png" alt="GitHub"/>
+                <div class="bubble" id="github">Explore my projects</div>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
-
+<script src="particles.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

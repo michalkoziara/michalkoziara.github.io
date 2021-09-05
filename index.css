@@ -1,0 +1,193 @@
+/* Created on : 2018-05-01, 16:57:32 Author : Michał Koziara */
+body {
+    font-size: 18px;
+    background: #C0B283;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    align-items: center;
+}
+.typewriter h1 {
+    font-size: 5em;
+    text-align: center;
+    font-family: monospace, sans-serif;
+}
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+section {
+    display: flex;
+    align-items: center;
+}
+a[data]:hover:after {
+    content: attr(data);
+    padding: 0.222em 0.6em;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.github-logo {
+    position: relative;
+}
+.github-logo:hover:after {
+    color: aliceblue;
+    left: 53%;
+    top: 90%;
+}
+.linkedin-logo:hover:after {
+    color: deepskyblue;
+    left: 5%;
+    top: 90%;
+}
+.bubble {
+    position: absolute;
+    text-align: center;
+    background-color: #c4c4c4;
+    color: black;
+    font-size: 1.2em;
+    border-radius: 10px;
+    width: 120px;
+    padding: 10px;
+    transform: scale(0);
+    animation: expand-bounce 1s forwards;
+}
+.bubble::before {
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 15px;
+    border-color: #c4c4c4 transparent transparent #c4c4c4;
+}
+.bubble#github {
+    transform-origin: 0 100%;
+    left: 5.25em;
+    top: -80px;
+}
+.bubble#github::before {
+    bottom: -25px;
+    left: 5px;
+    transform: rotate(10deg);
+}
+.bubble#linkedin {
+    transform-origin: 100% 100%;
+    left: -3.3em;
+    top: -80px;
+}
+.bubble#linkedin::before {
+    bottom: -25px;
+    left: 85px;
+    transform: rotate(75deg);
+}
+@keyframes expand-bounce {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+div.icons {
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+div.icons a img {
+    height: 100%;
+    border-radius: 8px;
+}
+div.icons a {
+    font-size: 1em;
+    height: 7em;
+    width: 7em;
+    margin: 0 2em;
+}
+#particles-js {
+    width: 80%;
+    min-height: 80vh;
+    max-height: 80%;
+    background: #373737;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+#particles-js canvas {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+    vertical-align: bottom;
+}
+div.icons p {
+    display: none;
+}
+@media only screen and (max-width: 550px) {
+    div.icons a {
+        max-width: 5em;
+        max-height: 5em;
+        margin: 0 0.3em;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    #particles-js {
+        min-height: 75vh;
+        max-height: 75%;
+    }
+    div.icons a[data]:hover:after {
+        content: "";
+        padding: 0;
+    }
+    div.icons p {
+        display: block;
+        content: attr(data);
+        padding: 0.222em 0.6em;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 2;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .linkedin-tooltip {
+        color: deepskyblue;
+        left: -5%;
+        top: 90%;
+    }
+    .github-tooltip {
+        color: aliceblue;
+        left: 67%;
+        top: 90%;
+    }
+    .bubble#github {
+        left: 3.25em;
+        top: -80px;
+    }
+    .bubble#linkedin {
+        left: -5em;
+        top: -80px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+}

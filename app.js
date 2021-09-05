@@ -1,18 +1,37 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
+document.addEventListener('DOMContentLoaded',function(){
+    const dataText = ["Michał Koziara", "Software Developer", "Michał Koziara"];
 
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
+    function typeWriter(text, i, fnCallback) {
+        if (i < (text.length)) {
+            document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+            setTimeout(function() {
+                typeWriter(text, i + 1, fnCallback)
+            }, 100);
+        }
+        else if (typeof fnCallback == 'function') {
+            setTimeout(fnCallback, 700);
+        }
+    }
+
+    function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined'){
+            setTimeout(function() {
+                StartTextAnimation(0);
+            }, 20000);
+        }
+
+        if (i < dataText[i].length) {
+            typeWriter(dataText[i], 0, function(){
+                StartTextAnimation(i + 1);
+            });
+        }
+    }
+
+    StartTextAnimation(0);
 });
-*/
-
-/* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
-
     {
         "particles": {
             "number": {
@@ -129,5 +148,4 @@ particlesJS('particles-js',
             "background_size": "cover"
         }
     }
-
 );
